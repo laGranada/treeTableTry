@@ -22,15 +22,15 @@ public class DocumentService {
     public TreeNode createDocuments() {
         TreeNode root = new DefaultTreeNode(new Document("Files", "-", "Folder"), null);
          
-        TreeNode documents = new DefaultTreeNode(new Document("Documents", "-", "Folder"), root);
+        TreeNode name1 = new DefaultTreeNode(new Document("Name1", "-", "Folder"), root);
         TreeNode pictures = new DefaultTreeNode(new Document("Pictures", "-", "Folder"), root);
         TreeNode movies = new DefaultTreeNode(new Document("Movies", "-", "Folder"), root);
          
-        TreeNode work = new DefaultTreeNode(new Document("Work", "-", "Folder"), documents);
-        TreeNode primefaces = new DefaultTreeNode(new Document("PrimeFaces", "-", "Folder"), documents);
+        TreeNode work = new DefaultTreeNode(new Document("Work", "-", "Folder"), name1);
+        TreeNode primefaces = new DefaultTreeNode(new Document("PrimeFaces", "-", "Folder"), name1);
          
         //Documents
-        TreeNode expenses = new DefaultTreeNode("document", new Document("Expenses.doc", "30 KB", "Word Document"), work);
+        TreeNode expenses = new DefaultTreeNode("document", new Document("what.doc", "30 KB", "Word Document"), work);
         TreeNode resume = new DefaultTreeNode("document", new Document("Resume.doc", "10 KB", "Word Document"), work);
         TreeNode refdoc = new DefaultTreeNode("document", new Document("RefDoc.pages", "40 KB", "Pages Document"), primefaces);
          
@@ -55,15 +55,15 @@ public class DocumentService {
     public TreeNode createCheckboxDocuments() {
         TreeNode root = new CheckboxTreeNode(new Document("Files", "-", "Folder"), null);
          
-        TreeNode documents = new CheckboxTreeNode(new Document("Documents", "-", "Folder"), root);
+        TreeNode name1 = new CheckboxTreeNode(new Document("Name1", "-", "Folder"), root);
         TreeNode pictures = new CheckboxTreeNode(new Document("Pictures", "-", "Folder"), root);
         TreeNode movies = new CheckboxTreeNode(new Document("Movies", "-", "Folder"), root);
          
-        TreeNode work = new CheckboxTreeNode(new Document("Work", "-", "Folder"), documents);
-        TreeNode primefaces = new CheckboxTreeNode(new Document("PrimeFaces", "-", "Folder"), documents);
+        TreeNode work = new CheckboxTreeNode(new Document("Work", "-", "Folder"), name1);
+        TreeNode primefaces = new CheckboxTreeNode(new Document("PrimeFaces", "-", "Folder"), name1);
          
         //Documents
-        TreeNode expenses = new CheckboxTreeNode("document", new Document("Expenses.doc", "30 KB", "Word Document"), work);
+        TreeNode expenses = new CheckboxTreeNode("document", new Document("what.doc", "30 KB", "Word Document"), work);
         TreeNode resume = new CheckboxTreeNode("document", new Document("Resume.doc", "10 KB", "Word Document"), work);
         TreeNode refdoc = new CheckboxTreeNode("document", new Document("RefDoc.pages", "40 KB", "Pages Document"), primefaces);
          

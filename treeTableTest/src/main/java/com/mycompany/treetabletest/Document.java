@@ -53,13 +53,13 @@ public class Document implements Serializable, Comparable<Document> {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.name);
-        hash = 71 * hash + Objects.hashCode(this.size);
-        hash = 71 * hash + Objects.hashCode(this.type);
+        int hash = 3;
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + Objects.hashCode(this.size);
+        hash = 67 * hash + Objects.hashCode(this.type);
         return hash;
     }
- 
+
     
  
     @Override
