@@ -16,17 +16,11 @@ import java.util.Objects;
 public class Document implements Serializable, Comparable<Document> {
  
     private String name;
-     
-    private String size;
-     
-    private String type;
-     
-    public Document(String name, String size, String type) {
+    
+    public Document(String name){
         this.name = name;
-        this.size = size;
-        this.type = type;
     }
- 
+    
     public String getName() {
         return name;
     }
@@ -34,61 +28,32 @@ public class Document implements Serializable, Comparable<Document> {
     public void setName(String name) {
         this.name = name;
     }
- 
-    public String getSize() {
-        return size;
-    }
- 
-    public void setSize(String size) {
-        this.size = size;
-    }
- 
-    public String getType() {
-        return type;
-    }
- 
-    public void setType(String type) {
-        this.type = type;
-    }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.name);
-        hash = 67 * hash + Objects.hashCode(this.size);
-        hash = 67 * hash + Objects.hashCode(this.type);
+        hash = 41 * hash + Objects.hashCode(this.name);
         return hash;
     }
 
-    
- 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
-        Document other = (Document) obj;
-        if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
+        }
+        final Document other = (Document) obj;
+        if (!Objects.equals(this.name, other.name)) {
             return false;
-        if (size == null) {
-            if (other.size != null)
-                return false;
-        } else if (!size.equals(other.size))
-            return false;
-        if (type == null) {
-            if (other.type != null)
-                return false;
-        } else if (!type.equals(other.type))
-            return false;
+        }
         return true;
     }
- 
+    
     @Override
     public String toString() {
         return name;

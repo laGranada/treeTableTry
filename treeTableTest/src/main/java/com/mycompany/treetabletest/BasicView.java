@@ -18,20 +18,22 @@ import org.primefaces.model.TreeNode;
  */
 @ManagedBean(name="ttBasicView")
 @ViewScoped
+//wie ContactController
 public class BasicView implements Serializable {
      
-    private TreeNode root;
-     
+     private TreeNode root;
+    
+     //private Contact
     private Document selectedDocument;
-         
+    
     @ManagedProperty("#{documentService}")
     private DocumentService service;
-     
+    
     @PostConstruct
     public void init() {
         root = service.createDocuments();
     }
- 
+    
     public TreeNode getRoot() {
         return root;
     }
