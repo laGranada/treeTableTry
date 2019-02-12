@@ -10,18 +10,18 @@
     
     <body>
        <h:form id="form">
-        <p:treeTable style="width:600px" value="#{ttBasicView.root}" var="document">
+        <p:treeTable value="#{ttBasicView.root}" var="document">
             <f:facet name="header">
                 Kontakte
             </f:facet>
             <p:column  headerText="Name">
                 <h:outputText value="#{document.name}" />
             </p:column>
-           <!-- <p:column style="width:24px">
+           <p:column style="width:24px">
                 <p:commandLink update=":form:documentPanel" oncomplete="PF('documentDialog').show()" title="View Detail" styleClass="ui-icon pi pi-search">
                     <f:setPropertyActionListener value="#{document}" target="#{ttBasicView.selectedDocument}" />
                 </p:commandLink> 
-            </p:column>-->
+            </p:column>
         </p:treeTable> 
         
         <p:dialog id="dialog" header="Document Detail" showEffect="fade" widgetVar="documentDialog" modal="true" resizable="false">
