@@ -43,7 +43,7 @@ public class DocumentService {
     }
     
     public TreeNode createCheckboxDocuments(){
-        TreeNode root = new CheckboxTreeNode(new Document("Names"), null);
+        TreeNode root = new CheckboxTreeNode(new Document("Name"), null);
         
         TreeNode name1 = new CheckboxTreeNode(new Document("Uwe Müller"), root);
         TreeNode name2 = new CheckboxTreeNode(new Document("Geralt von Riva"), root);
